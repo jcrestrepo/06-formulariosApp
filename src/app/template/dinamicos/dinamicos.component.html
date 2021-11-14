@@ -1,0 +1,77 @@
+<h2>Template <small>Dinamicos</small></h2>
+<hr>
+
+<form (ngSubmit)="guardar()" #miFormularioDinamico="ngForm">
+    <!-- Nombre -->
+    <div class="mb-3 row">
+        <label class="col-sm-3 col-form-label"> Nombre</label>
+        <div class="col-sm-9 col-form-input">
+            <input type="text" name="nombrePersona" required ngModel name="nombrePersona" class="form-control"
+                placeholder="Nombre de la persona">
+            <span *ngIf="nombreValido()" class="form-text text-danger">Debe ser de 3 letras</span>
+        </div>
+
+    </div>
+
+
+   
+
+    <!-- Agregar -->
+    <div class="mb-3 row">
+        <label class="col-sm-3 col-form-label">Agregar</label>
+        <div class="col-sm-9">
+            <div class="input-group">
+                <input type="text" (keyup.enter)="agregarJuego()" [(ngModel)]="nombreFavorito" name="nombreFavorito"
+                    class="form-control" required placeholder=" Juego Favorito">
+                <button class="btn btn-primary" type="button" (click)="agregarJuego()"
+                    id="button-addon2">Agregar</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Favoritos -->
+    <div class="mb-3 row">
+        <label class="col-sm-3 col-form-label"> Nombre</label>
+        <div class="col-sm-9 col-form-input ">
+            <div *ngFor="let item of persona.favoritos let i=index" class="input-group  mb-3">
+                <input [(ngModel)]="item.nombre" class="form-control " type="text" name="favorito_{{i}}" required
+                    placeholder="Ingrese el nobmre del Juego Favorito">
+                <button class="btn btn-outline-danger" (click)="eliminar(i)" type="button"
+                    id="Eliminar">Eliminar</button>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="row">
+        <div class="col-sm-12">
+            <button type="button" (event)="guardar()" [disabled]="miFormularioDinamico.invalid"
+                class="btn btn-primary float-end">Guardar </button>
+        </div>
+    </div>
+</form>
+
+
+
+<span>Persona</span>
+<pre> {{persona | json}} </pre>
+
+
+<div class="row">
+    <div class="col">
+        <span>Valid</span>
+        <pre>{{miFormularioDinamico.valid }} </pre>
+
+        <span>Pristinie</span>
+        <pre>{{miFormularioDinamico.pristine }} </pre>
+
+        <span>Touche</span>
+        <pre>{{miFormularioDinamico.touched }} </pre>
+
+        <span>Value</span>
+        <pre>{{miFormularioDinamico.value | json }} </pre>
+
+    </div>
+</div>

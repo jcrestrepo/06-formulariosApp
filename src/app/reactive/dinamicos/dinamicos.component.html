@@ -1,0 +1,77 @@
+<h2>Reactive <small>Dinamicos</small></h2>
+<hr>
+
+<form>
+    <!-- Nombre -->
+    <div class="mb-3 row">
+        <label class="col-sm-3 col-form-label"> Nombre</label>
+        <div class="col-sm-9 col-form-input">
+            <input type="text" 
+              class="form-control"
+                placeholder="Nombre de la persona">
+            <span  class="form-text text-danger">Debe ser de 3 letras</span>
+        </div>
+
+    </div>
+
+
+   
+
+    <!-- Agregar -->
+    <div class="mb-3 row">
+        <label class="col-sm-3 col-form-label">Agregar</label>
+        <div class="col-sm-9">
+            <div class="input-group">
+                <input type="text"
+                    class="form-control"  placeholder=" Juego Favorito">
+                <button class="btn btn-primary" type="button" id="button-addon2">Agregar</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Favoritos -->
+    <div class="mb-3 row">
+        <label class="col-sm-3 col-form-label"> Nombre</label>
+        <div class="col-sm-9 col-form-input ">
+            <div class="input-group  mb-3">
+                <input  class="form-control " type="text" required
+                    placeholder="Ingrese el nobmre del Juego Favorito">
+                <button class="btn btn-outline-danger" type="button"
+                    id="Eliminar">Eliminar</button>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="row">
+        <div class="col-sm-12">
+            <button type="button" 
+                class="btn btn-primary float-end">Guardar </button>
+        </div>
+    </div>
+</form>
+
+<!-- 
+
+<span>Persona</span>
+<pre> {{persona | json}} </pre>
+
+
+<div class="row">
+    <div class="col">
+        <span>Valid</span>
+        <pre>{{miFormularioDinamico.valid }} </pre>
+
+        <span>Pristinie</span>
+        <pre>{{miFormularioDinamico.pristine }} </pre>
+
+        <span>Touche</span>
+        <pre>{{miFormularioDinamico.touched }} </pre>
+
+        <span>Value</span>
+        <pre>{{miFormularioDinamico.value | json }} </pre>
+
+    </div>
+</div> -->
