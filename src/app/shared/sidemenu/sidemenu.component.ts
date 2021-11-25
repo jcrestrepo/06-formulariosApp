@@ -33,6 +33,7 @@ export class SidemenuComponent  {
       texto:"Switches",
       ruta:"/template/swithces"
     }
+    
   ];
 
   reactiveMenu : MenuItem[] =[
@@ -47,6 +48,17 @@ export class SidemenuComponent  {
     {
       texto:"Switches",
       ruta:"/reactive/swithces"
+    }
+  ]
+
+  authMenu : MenuItem[] =[
+    {
+      texto:"Registro",
+      ruta:"/auth/pages/registro"
+    },
+    {
+      texto:"Login",
+      ruta:"/auth/pages/login"
     }
   ]
 
